@@ -1,0 +1,54 @@
+.header
+    min-height: 205px
+    background: $gray-bg
+
+    &__wrap
+        max-width: 1200px
+        margin: 0 auto
+        background: blue
+
+    &__top
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        padding: 21px
+        color: #ffffff
+
+.top
+    &__city
+        margin: 13px 0 0 -5px
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+        position: relative
+
+        &:before
+            content: ''
+            position: absolute
+            width: 16px
+            height: 24px
+            top: 1px
+            left: -29px
+            background: url('../img/header/top/city-geo.svg') no-repeat
+
+    &__cart
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+        position: relative
+
+.city
+    &__name
+        font: 400 23px/1em 'Avenir Next Cyr'
+        text-transform: uppercase
+        margin-bottom: 8px
+
+    &__select
+        font: 400 17px/1em 'Avenir Next Cyr'
+        letter-spacing: -1.1px
+        padding-bottom: 3px
+        border-bottom: 1px dashed #ffffff
+        cursor: pointer
+
