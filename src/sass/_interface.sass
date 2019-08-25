@@ -6,27 +6,17 @@ html
 
 // Экстрамалые девайсы («портретные телефоны», < 576px)
 @media (max-width: 575.98px) 
-     html
+    html
         font-size: 0.6rem
 
 // Малые девайсы («ландшафтные», >= 575px)
 @media (min-width: 576px) and (max-width: 767.98px) 
-     html
-        font-size: 0.65rem
-
-// Средние девайсы («таблетки», >= 768px) 
-@media (min-width: 768px) and (max-width: 991.98px) 
-     html
-        font-size: 0.8rem
-
-// Большие девайсы (большие десктопы, >= 992px)
-@media (min-width: 992px) and (max-width: 1199.98px) 
-     html
-        font-size: 1rem
+    html
+        font-size: 0.5rem
 
 // Большие девайсы (большие десктопы, >= 1200px)
 @media (min-width: 1200px) 
-     html
+    html
         font-size: 1rem
 
 .main-page
@@ -36,3 +26,42 @@ html
     font-family: 'Avenir Next Cyr', sans-serif
     width: 100%
     overflow-y: scroll
+
+.wrapper
+    display: flex
+    flex-flow: column
+    max-width: 1220px
+    margin: 0 auto
+    padding: 0 10px 0
+
+.header
+    min-height: 205px
+    background: $gray
+
+.info
+    margin: 0 auto
+    min-height: 75px
+    background: $red  url('../img/info/bg.png')
+
+.main
+    margin-top: 10px
+    background: #ffffff  
+    border-radius: 10px
+
+.footer
+    margin-top: 115px
+    background: $footer-bg
+
+@media (max-width: 575.98px) 
+    .footer
+        margin-top: 0
+        
+@media (min-width: 576px) and (max-width: 767.98px) 
+    .footer
+        margin-top: 0
+
+    .header
+        min-height: 225px
+
+
+

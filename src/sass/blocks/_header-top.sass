@@ -1,0 +1,163 @@
+.header
+    &__top
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        height: 105px
+        padding-top: 21px
+        color: #ffffff
+
+
+@media (max-width: 575.98px) 
+    &__top
+        order: -1
+
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+    &__top
+        order: -1
+        justify-content: center
+
+.top
+    &__city
+        position: relative
+        margin: 13px 0 0 29px
+        display: flex
+        flex-flow: column nowrap
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        cursor: pointer
+
+        &::before
+            content: ''
+            position: absolute
+            width: 16px
+            height: 24px
+            top: 1px
+            left: -28px
+            background: url('../img/header/top/city-geo.svg') no-repeat
+
+    &__cart
+        margin: 13px 0 0 0
+        display: flex
+        flex-flow: column nowrap
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        letter-spacing: -0.5px
+        cursor: pointer
+
+        &::before
+            content: ''
+            position: absolute
+            width: 20px
+            height: 21px
+            top: 1px
+            left: -32px
+            background: url('../img/header/top/cart.svg') no-repeat
+
+    &__logo
+        margin: -1px 0 0 -5px
+
+@media (max-width: 575.98px) 
+    .top
+        &__city
+            display: none
+
+        &__cart
+            display: none
+
+        &__logo
+            margin: 0 auto
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+    .top   
+        &__logo
+            margin-left: 0 
+            order: -1 
+
+        &__city
+            &::before
+                top: -2px
+
+        &__cart
+            &::before
+                top: -2px
+
+.city
+    &__name
+        font: 400 23px/1.2em 'Avenir Next Cyr'
+        text-transform: uppercase
+
+    &__select
+        font: 400 17px/1.3em 'Avenir Next Cyr'
+        letter-spacing: -1.1px
+        border-bottom: 1px dashed #ffffff
+        cursor: pointer
+
+    &__list
+        visibility: hidden
+        position: absolute
+        top: 38px
+        left: 0
+        background: $gray
+        list-style-type: none
+        margin: 11px 0 0 -25px
+        padding: 0
+        width: 175px
+        border-top: 1px dotted #ffffff
+        border-radius: 0 0 7px 7px
+        z-index: 9997
+
+        &--show
+            visibility: visible
+
+    &__item
+        padding: 5px 6px	
+				
+    &__link
+        padding:  0 20px 0 30px
+        color: #ffffff
+        text-decoration: none
+        font: 400 18px/0.9em 'Avenir Next Cyr'
+
+        &:hover
+            text-decoration: underline
+
+        &--main
+            font-weight: 500
+        
+.cart
+    &__name
+        font: 400 23px/1.2em 'Avenir Next Cyr'
+        text-transform: uppercase
+
+    &__subname
+        font: 400 17px/1.3em 'Avenir Next Cyr'
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+    .city
+        &__name
+            font: 400 18px/1.2em 'Avenir Next Cyr'
+            text-transform: uppercase
+            border-bottom: 1px dashed #ffffff
+
+        &__select
+           display: none
+
+        &__list
+            border: none
+            top: 11px
+            margin-left: -36px
+
+    .cart
+        &__name
+            font-size: 18px
+            text-transform: uppercase
+
+        &__subname
+            font-size: 15px
+            border-bottom: 1px dashed #ffffff
+
+       

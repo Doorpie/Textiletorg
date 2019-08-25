@@ -1,0 +1,75 @@
+@media (max-width: 575.98px) 
+    .header
+        &__search
+            order: 1
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+    .header
+        &__search
+            order: 1
+    
+.search
+    &__wrap
+        position: relative
+        display: flex
+        flex-flow: row nowrap
+        justify-content: center
+        align-items: center
+
+        &:after
+            content: ''
+            position: absolute
+            width: 24px
+            height: 23px
+            top: 11px
+            right: 158px
+            background: url('../img/header/search/search.svg') no-repeat
+
+    &__input
+        position: relative
+        width: 1050px
+        height: 44px
+        margin-right: 3px
+        padding: 9px 35px 10px 18px 
+        border: none
+        border-radius: 5px
+        background: $search-bg
+        color: $gray
+        font: bold 21px/1.19em 'Avenir Next Cyr Medium'
+        text-transform: uppercase
+
+    &__btn
+        width: 147px
+        height: 44px
+        background: $red
+        border: none
+        border-radius: 5px
+        color: #ffffff
+        font: bold 21px/1.28em 'Avenir Next Cyr'
+        letter-spacing: 0.42px
+        text-transform: uppercase
+        cursor: pointer
+
+@media (max-width: 575.98px) 
+    .search
+        &__wrap
+            flex-flow: column nowrap
+            padding-bottom: 5px
+            &::after
+                right: 1em
+
+        &__input
+            width: 100%
+            margin-bottom: 10px
+
+        &__btn
+            width: 100%
+            margin-bottom: 5px
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+    .search
+        &__wrap
+            padding-bottom: 5px
+            
+            &::after
+                right: 12em

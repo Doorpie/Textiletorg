@@ -1,0 +1,132 @@
+.main
+    &__leaders
+        margin-top: 45px
+
+.leaders
+    &__btn
+        width: 394px
+        height: 72px
+        border: none
+        border-radius: 5px 5px 10px 10px
+        background: $red-btn
+        font: 400 25px/1.28em 'Avenir Next Cyr'
+        text-transform: uppercase
+        color: #ffffff
+        text-align: center
+        padding: 21px 0 19px 0
+
+    &__text
+        margin-top: 58px
+        font: 300 26px/1.23em 'Avenir Next Cyr'
+        text-align: justify
+        color: $text
+
+    @media (max-width: 575.98px) 
+        &__btn
+            width: 100%
+
+        &__text
+            font-size: 16px
+            text-align: center
+            margin-top: 20px
+
+    @media (min-width: 576px) and (max-width: 767.98px) 
+        &__btn
+            font-size: 23px 'Avenir Next Cyr Medium'
+            font-family: 
+            width: 100%
+
+        &__text
+            font-size: 18px
+            text-align: center
+            margin-top: 20px
+
+.leaders-slider
+    &__item
+        display: flex
+        flex-flow: column nowrap
+        background: #ffffff
+        width: 293px
+        height: 432px
+        border: 1px solid $slider-border
+        border-radius: 5px
+        margin-top: 10px
+        margin-right: 9px
+        padding: 19px 29px
+        text-align: center
+
+    &__name, &__subname
+        margin: 0
+        font: 400 15px/1.28em 'Avenir Next Cyr Medium'
+        text-transform: uppercase
+        color: $black
+
+    &__btn-buy, &__btn-click
+        display: block
+        width: 187px
+        height: 34px
+        border: none
+        border-radius: 5px 5px 10px 10px
+        margin: 0 auto
+
+    &__btn-buy
+        font: bold 17px/1.26em 'Avenir Next Cyr' 
+        text-transform: uppercase
+        color: #ffffff
+        background: $red
+        margin: 11px auto 8px auto
+
+    &__btn-click
+        font: 400 14px/1.26em 'Avenir Next Cyr' 
+        text-transform: uppercase
+        color: $black
+        background: $yellow
+
+    &__img
+        width: 229px
+        margin: 9px 0 29px
+
+    &__prev
+        cursor: pointer
+        position: absolute
+        z-index: 1
+        top: 50%
+        left: 15px
+        width: 12px
+        height: 26px
+        background: url(../img/main/leaders/prev.svg) no-repeat
+        transform: translateY(-50%)
+
+    &__next
+        cursor: pointer
+        position: absolute
+        z-index: 100
+        top: 50%
+        right: 15px
+        width: 12px
+        height: 26px
+        background: url(../img/main/leaders/next.svg) no-repeat
+        transform: translateY(-50%)
+
+    @media (max-width: 575.98px) 
+        &__item 
+            width: 100%
+
+        &__img
+            margin: 0 auto
+
+    @media (min-width: 576px) and (max-width: 767.98px) 
+        &__item
+            width: 100%
+            margin-right: 0
+
+        &__img
+            margin: 0 auto
+
+    .price
+        &__cost
+            font: 400 19px/1.26em 'Avenir Next Cyr' 
+
+        &__number, &__currency
+            font: bold 26px/1.3em 'Avenir Next Cyr Medium' 
+            color: $red

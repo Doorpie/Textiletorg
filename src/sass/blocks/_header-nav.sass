@@ -1,0 +1,150 @@
+.header
+    &__nav
+        width: 909px
+        margin: 0 auto
+
+@media (max-width: 575.98px) 
+    .header
+        &__nav
+            order: 0
+            width: 100%
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+    .header
+        &__nav
+            order: 0
+            width: 100%
+            margin-bottom: 10px
+
+.nav
+    &__list
+        padding: 0
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+
+    &__item
+        list-style-type: none
+        margin-left: 1px
+
+    &__link
+        padding: 7px  0 4px
+        color: #ffffff
+        text-decoration: none
+        font: 400 13px/1.38em "Avenir Next Cyr"
+        text-transform: uppercase
+        letter-spacing: 0.26px
+
+        &:hover
+            border-bottom: 1px solid #ffffff
+
+    &__menu
+        position: relative
+
+@media (max-width: 575.98px) 
+    .nav
+        &__list
+            display: none
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+    .nav
+        &__list
+            display: none
+
+@media (min-width: 768px)
+    .nav
+        &__menu
+            display: none  
+
+.menu
+    &__button
+        display: block
+        width: 44px
+        height: 44px
+
+    &__lines,
+    &__lines::after,
+    &__lines::before
+        position: absolute
+        width: 38px
+        height: 3px
+        background: #ffffff
+
+    &__lines
+        top: 0
+        left: 50%
+        transform: translate(-50%, 0)
+
+        &::before
+            content: ""
+            top: -8px
+
+        &::after
+            content: ""
+            top: 8px
+
+.aside-menu
+    &__nav
+        display: none
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 1130
+        width: 40%
+        height: 100%
+        background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) )
+
+        &--active
+            display: block
+
+    &__close
+        position: absolute
+        top: 0
+        right: 10px
+        font-size: 35px
+        font-weight: 800
+        color: #ffffff
+        cursor: pointer
+
+    &__list
+        margin: 0
+        padding: 50px 10px 0 0
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        list-style-type: none
+
+    &__item
+        margin-bottom: 30px
+
+    &__link
+        text-decoration: none
+        color: #fff
+        font: bold 18px/1em 'Avenir Next Cyr'
+        text-transform: uppercas
+
+        &:hover
+            text-decoration: underline
+
+    &__overlay
+        display: none
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 1020
+        background-color: rgba(0, 0, 0, 0.5)
+
+        &--active
+            display: block
+
+    @media (max-width: 575.98px) 
+        &__nav
+            width: 100%
+
+    @media (min-width: 576px) and (max-width: 767.98px)
+        &__nav
+            width: 60%
+
+
