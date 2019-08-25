@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+    // slick slider
+    // main-slider
+
     $('.main__slider').slick({
         prevArrow: '<div class="slider__prev"></div>',
         nextArrow: '<div class="slider__next"></div>',
@@ -7,6 +10,10 @@ $(document).ready(function(){
         dotsClass: 'slider-dots',
         mobileFirst: true
     });
+
+// end main-slider
+
+// leaders-slider
 
     $('.leaders__slider').slick({
         prevArrow: '<div class="leaders-slider__prev"></div>',
@@ -24,6 +31,10 @@ $(document).ready(function(){
         ]
     });
 
+// end leaders slider
+
+// news slider
+
     $('.news__slider').slick({
         prevArrow: '<div class="news-slider__prev"></div>',
         nextArrow: '<div class="news-slider__next"></div>',
@@ -39,6 +50,10 @@ $(document).ready(function(){
             }
         ]
     });
+
+// end news slider
+
+// discounts slider
 
     $('.discounts__slider').slick({
         prevArrow: '<div class="discounts-slider__prev"></div>',
@@ -56,19 +71,17 @@ $(document).ready(function(){
         ]
     });
 
-    $('.city__select, .city__name').on('mousemove', function(){
-        if (!$('.city__list').hasClass('city__list--show')){
-            $('.city__list').addClass('city__list--show');
-        } 
-    });
+// end discounts slider
+// ens slick slider
 
-  
+// select city
+    $('.city__select, .city__name, .city__link').on('click', function(){
+        $('.city__list').toggleClass('city__list--show');
+       });
 
-    $(document).on('click', function(){
-        if ($('.city__list').hasClass('city__list--show')){
-            $('.city__list').removeClass('city__list--show');
-        }
-    });
+//    end select city
+
+// aside menu
 
     function btnMenu(selector){
         const menu = $(selector),
@@ -97,3 +110,5 @@ $(document).ready(function(){
 
     btnMenu('.menu__lines');
 });
+
+// end aside menu
