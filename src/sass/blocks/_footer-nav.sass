@@ -2,53 +2,54 @@
     &__nav
         display: flex
         align-items: center
-        background: $gray
+
         height: 54px
 
-    @media (max-width: 575.98px) 
+        background: $footer-nav-bg
+
+    @media (max-width: 575.98px)
         &__nav
             width: 100%
 
-    @media (min-width: 576px) and (max-width: 767.98px) 
+    @media (min-width: 576px) and (max-width: 767.98px)
         &__nav
             width: 100%
             margin-bottom: 10px
 
     .nav
         &__list
-            width: 909px
-            margin: 0 auto
-            padding: 0
             display: flex
             flex-flow: row wrap
             justify-content: space-between
 
+            width: 909px
+            margin: 0 auto
+            padding: 0
+
         &__item
-            list-style-type: none
             margin-left: 1px
 
+            list-style-type: none
+
         &__link
-            padding: 7px  0 4px
-            color: #ffffff
+            font: 400 0.8125rem / 1.38em $Avenir
+
+            padding: 7px 0 4px
+
             text-decoration: none
-            font: 400 13px/1.38em "Avenir Next Cyr"
+            letter-spacing: .26px
             text-transform: uppercase
-            letter-spacing: 0.26px
+
+            color: $footer-nav-text
 
             &:hover
-                color: $nav-hover
-                border-bottom: 1px solid $nav-hover
+                color: $footer-nav-text-hover
+                border-bottom: 1px solid $footer-nav-text-hover
 
         &__menu
             position: relative
 
-        @media (max-width: 575.98px) 
+        @media (max-width: 991.98px)
             &__list
                 display: none
-
-        @media (min-width: 576px) and (max-width: 767.98px) 
-            &__list
-                display: none
-
-
 

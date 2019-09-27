@@ -1,102 +1,149 @@
 .main
     &__news
-        margin-top: 35px
+        margin-top: 37px
 
-.news
+        background: $main-news-bg
+
+.news   
     &__btn
+        font: 400 1.5625rem/1.28em $Avenir
+
         width: 394px
         height: 72px
-        border: none
-        border-radius: 5px 5px 10px 10px
-        background: $yellow
-        font: 400 25px/1.28em 'Avenir Next Cyr'
-        text-transform: uppercase
-        color: $black
-        text-align: center
+
         padding: 21px 0 19px 0
 
+        text-align: center
+        text-transform: uppercase
+
+        color: $main-news-title-text
+        border: none
+        border-radius: 5px 5px 10px 10px
+        background: $main-news-title-bg
+
     &__text
+        font: 300 1.625rem/1.23em $Avenir
+
         margin-top: 58px
-        font: 300 26px/1.23em 'Avenir Next Cyr'
+
         text-align: justify
-        color: $text
+
+        color: $main-news-text
 
     @media (max-width: 575.98px) 
         &__btn
             width: 100%
 
-    @media (min-width: 576px) and (max-width: 767.98px) 
+        &__text
+            font-size: 1rem
+
+            margin-top: 20px
+
+            text-align: center
+
+    @media (min-width: 576px) and (max-width: 1199.98px) 
         &__btn
-            font-size: 23px 'Avenir Next Cyr Medium'
-            font-family: 
+            font: 1.4375rem/1em $Avenir-Medium
+
             width: 100%
+
+        &__text
+            font-size: 1.125rem
+
+            margin-top: 20px
+
+            text-align: center
 
 .news-slider
     &__item
         display: flex
         flex-flow: column nowrap
-        background: #ffffff
+
         width: 293px
         height: 432px
-        border: 1px solid $slider-border
-        border-radius: 5px
         margin-top: 10px
         margin-right: 9px
         padding: 19px 29px
+
         text-align: center
 
+        border: 1px solid $main-news-border
+        border-radius: 5px
+        background: $main-leadrs-cards-bg
+
+    &__link
+        text-decoration: none
+
     &__name, &__subname
+        font: 400 0.9375rem/1.28em $Avenir-Medium
+
         margin: 0
-        font: 400 15px/1.28em 'Avenir Next Cyr Medium'
+
         text-transform: uppercase
-        color: $black
+
+        color: $main-leadrs-cards-name
 
     &__btn-buy, &__btn-click
         display: block
+
         width: 187px
         height: 34px
-        border: none
-        border-radius: 5px 5px 10px 10px
         margin: 0 auto
 
+        cursor: pointer
+
+        border: none
+        border-radius: 5px 5px 10px 10px
+
     &__btn-buy
-        font: bold 17px/1.26em 'Avenir Next Cyr' 
-        text-transform: uppercase
-        color: #ffffff
-        background: $red
+        font: bold 17px/1.26em $Avenir 
+
         margin: 11px auto 8px auto
 
-    &__btn-click
-        font: 400 14px/1.26em 'Avenir Next Cyr' 
         text-transform: uppercase
-        color: $black
-        background: $yellow
+
+        color: $main-news-btn-buy-text
+        background: $main-leadrs-btn-buy-bg
+
+    &__btn-click
+        font: 400 14px/1.26em $Avenir 
+
+        text-transform: uppercase
+
+        color: $main-news-btn-click-text
+        background: $main-leadrs-btn-click-bg
 
     &__img
         width: 229px
         margin: 9px 0 29px
 
     &__prev
-        cursor: pointer
         position: absolute
         z-index: 1
         top: 50%
         left: 15px
+
         width: 12px
         height: 26px
-        background: url(../img/main/news/prev.svg) no-repeat
+
+        cursor: pointer
         transform: translateY(-50%)
 
+        background: url(../img/main/news/prev.svg) no-repeat
+
     &__next
-        cursor: pointer
         position: absolute
         z-index: 100
         top: 50%
         right: 15px
+
         width: 12px
         height: 26px
-        background: url(../img/main/news/next.svg) no-repeat
+
+        cursor: pointer
         transform: translateY(-50%)
+
+        background: url(../img/main/news/next.svg) no-repeat
 
     @media (max-width: 575.98px) 
         &__item 
@@ -113,10 +160,18 @@
         &__img
             margin: 0 auto
 
+    @media (min-width: 768px) and (max-width: 1199.98px)
+        &__item
+            width: 99%
+
+        &__img
+            margin: 0 auto
+
     .price
         &__cost
-            font: 400 19px/1.26em 'Avenir Next Cyr' 
+            font: 400 1.1875rem/1.26em $Avenir 
 
         &__number, &__currency
-            font: bold 26px/1.3em 'Avenir Next Cyr Medium' 
-            color: $red
+            font: bold 1.625rem/1.3em $Avenir-Medium 
+
+            color: $main-news-cost-text

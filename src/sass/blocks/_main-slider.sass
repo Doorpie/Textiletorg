@@ -1,76 +1,100 @@
 .main
     &__slider
         position: relative
-        background: #ECEAEB
-        border: 1px solid $slider-gray
-        border-radius: 10px
+
         overflow: hidden
+
+        text-align: center
+
+        border: 1px solid $main-slider-border
+        border-radius: 10px
+        background: $main-slider-bg
+
+    @media (min-width: 1200px)
+        &__slider
+            min-height: 405px
     
 .slider
-    &__item
     &__img
         width: 100%
+        margin: 0 auto
 
     &__prev
-        cursor: pointer
         position: absolute
         z-index: 1
         top: 50%
         left: 15px
+
         width: 20px
         height: 65px
-        background: url(../img/main/slider/prev.svg) no-repeat
+
+        cursor: pointer
         transform: translateY(-50%)
 
+        background: url(../img/main/slider/prev.svg) no-repeat
+
     &__next
-        cursor: pointer
         position: absolute
         z-index: 100
         top: 50%
         right: 15px
+
         width: 20px
         height: 65px
-        background: url(../img/main/slider/next.svg) no-repeat
+
+        cursor: pointer
         transform: translateY(-50%)
 
-@media (max-width: 575.98px) 
-    .slider
-        &__prev, &__next
-            z-index: -1
+        background: url(../img/main/slider/next.svg) no-repeat
 
-@media (min-width: 576px) and (max-width: 767.98px) 
+@media (max-width: 767.98px) 
     .slider
         &__prev, &__next
             z-index: -1
-        
+   
 .slider-dots
     position: absolute
-    bottom: 0
+    bottom: -6px
     left: 50%
+
     display: flex
     justify-content: left  
+
     margin: 0
     padding: 1rem 0
+
     list-style-type: none
+
     transform: translateX(-50%)
 	
 .slider-dots li 
     margin: 0 0.25rem
 		
 .slider-dots button
-    display: 
     width: 1rem
     height: 1rem
     margin-right: 5px
-    border-radius: 10px
-    border: 1px solid $slider-gray
-    background: #ffffff
+
+    cursor: pointer
+
     text-indent: -9999px
+
+    border: 1px solid $main-slider-border
+    border-radius: 10px
+    background: $main-slider-dots-bg
+    background-size: cover
 	
 li.slick-active button 
-	background-color: red
-    
-    
+	background:  url(../img/main/slider/dots.svg) 50% 50% no-repeat
+
+@media (max-width: 575px)
+    .slider-dots button
+        display: none
+
+@media (min-width: 576px) and (max-width: 767.98px) 
+    .slider-dots button
+        width: 1.5rem
+        height: 1.5rem
 
 
     

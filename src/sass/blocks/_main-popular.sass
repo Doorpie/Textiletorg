@@ -1,125 +1,149 @@
 .main
     &__popular
-        padding-top: 23px
+        padding-top: 1.063em
+
+        background: $main-popular-bg
 
 .popular
     &__title
         display: flex
         flex-flow: row nowrap
         justify-content: center
+
         margin-bottom: 54px
-        // align-content: flex-start
 
     &__name
-        font: 400 30px/1.23em 'Avenir Next Cyr'
-        margin: 0 50px 0 0
-        color: $black
+        font: 400 1.875rem/1.23em $Avenir
+
+        margin: -1px 55px 0 8px
+
+        color: $main-popular-text
 
     &__btn
+        font: 400 0.875rem/1.28em $Avenir
+
         width: 158px
         height: 34px
-        background: $yellow
+
+        cursor: pointer
+
+        color: $main-popular-text
         border: none
         border-radius: 5px 5px 10px 10px
-        font: 400 14px/1.28em 'Avenir Next Cyr'
-        color: $black
-        cursor: pointer
+        background: $main-popular-btn-bg
 
     &__row
         display: flex
         flex-flow: row wrap
-        justify-content: flex-start
+        justify-content: space-between
 
     &__item
         display: flex
         flex-flow: row nowrap
-        margin-right: 40px
-        margin-bottom: 25px
+
+        margin: 0 40px 22px 10px
 
     &__img-box
         width: 90px
-        margin-right: 19px
+        margin-right: 1.188em
 
     &__info
         width: 250px
+
         cursor: pointer
         // cursor: url("../img/main/popular/cursor.svg"), pointer)
 
         &:hover
             & .popular__info-name, .popular__info-text
-                color: $red
+                color: $main-popular-text-hover
 
     &__info-name
-        font: bold 25px/1.32em 'Avenir Next Cyr Medium'
-        color: $black
+        font: bold 1.5625rem/1.18em $Avenir-Medium
+
         margin: 0 0 11px 0
 
+        color: $main-popular-text
+
     &__info-text
-        font: 400 18px/1.28em 'Avenir Next Cyr'
-        color: $black
+        font: 400 1.125rem/1.28em $Avenir
+
         margin: 0
+
+        color: $main-popular-text
 
     @media (max-width: 575.98px) 
         &__title
-            flex-direction: column
             align-items: center
+            flex-direction: column
 
         &__name
+            font: 800 1.4375rem / 1em $Avenir-Medium
+
             margin: 0 0 30px 0
+
             text-align: center
-            font-size: 23px
-            font-weight: 800
-            font-family: 'Avenir Next Cyr Medium'
 
         &__row
             justify-content: center
 
         &__item
-            flex-direction: column
             align-items: center
+            flex-direction: column
+
             margin-right: 0
             padding: 10px
-            border: 1px solid $gray
+
+            border: 1px solid $main-popular-border
             border-radius: 10px
 
         &__info
             text-align: center
 
         &__img-box
-            width: 100%
-            margin: 0
             display: flex
             justify-content: center
 
-    @media (min-width: 576px) and (max-width: 767.98px) 
+            width: 100%
+            margin: 0
+
+    @media (min-width: 576px) and (max-width: 1199.98px) 
         &__title
-            flex-direction: column
             align-items: center
+            flex-direction: column
 
         &__name
             margin: 0 0 30px 0
+
             text-align: center
-            font-size: 23px
-            font-weight: 800
-            font-family: 'Avenir Next Cyr Medium'
 
         &__row
             justify-content: center
 
         &__item
-            flex-direction: column
             align-items: center
+            flex-direction: column
+
             margin-right: 20px
             padding: 10px
-            border: 1px solid $gray
+
+            border: 1px solid $main-popular-border
             border-radius: 10px
 
         &__info
             text-align: center
 
         &__img-box
+            display: flex
+            justify-content: center
+
             width: 100%
             height: 100px
             margin: 0
-            display: flex
-            justify-content: center
+
+    @media (min-width: 1200px)
+        &__item
+            &:nth-child(2)
+                margin-left: -5px
+
+            &:nth-child(3)
+                margin-right: -10px

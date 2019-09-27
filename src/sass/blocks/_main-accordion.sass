@@ -1,62 +1,77 @@
  
 .no-select
-  -webkit-tap-highlight-color: rgba(0,0,0,0)
-  -webkit-touch-callout: none
   -webkit-user-select: none
-  -khtml-user-select: none
   -moz-user-select: none
   -ms-user-select: none
   user-select: none
 
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-touch-callout: none
+  -khtml-user-select: none
+
 .accordion
     &__name
-        height: 48px
-        border-radius: 5px
-        font: 400 17px/1.28 'Avenir Next Cyr'
+        font: 400 17px/1.28 $Avenir
+
         display: block
-        background-color: $yellow
-        padding: 14px 20px
+
+        max-height: 48px
         margin: 0
+        padding: 14px 20px
+
         cursor: pointer
+
+        border-radius: 5px
+        background-color: $main-accordion-active
+
         @extend .no-select
 
     @media (max-width: 575.98px) 
         &__name
-             font-size: 10px
+             font-size: 0.625rem
              font-weight: 800
+
              padding-right: 40px
 
     @media (min-width: 576px) and (max-width: 767.98px) 
         &__name
-            font-size: 14px
+            font-size: 0.875rem
             font-weight: 800
 
     &__row
-        color: $black
-        font-size: 17px
+        font-size: 1.0625rem
         line-height: 26px
-        letter-spacing: 1px
+
         position: relative
+        z-index: 2
+
         overflow: hidden
+
         max-height: 800px
-        opacity: 1
-        transform: translate( 0 , 0 )  
         margin-top: 14px
         padding: 10px
-        z-index: 2
+
+        transform: translate( 0 , 0 )  
+        letter-spacing: 1px
+
+        opacity: 1
+        color: $main-accordion-name
   
     &__list
-        list-style: none
-        perspective: 900
-        padding: 0
         margin: 0
+        padding: 0
+
+        list-style: none
+
+        perspective: 900
   
     &__item
         position: relative
-        padding: 0
+
         margin: 0
-        padding-bottom: 4px
-        padding-top: 18px
+        padding: 0
+        // padding-top: 18px
+        // padding-bottom: 4px
       
         &:nth-of-type(1)
             animation-delay: 0.5s
@@ -71,21 +86,27 @@
             padding-bottom: 0
 
     &__text
-        font: 400 14px/1.28 'Avenir Next Cyr'
-        color: #5f6163
+        font: 400 0.875rem/1.28 $Avenir
+
+        color: $main-accordion-text
       
     &__button
       position: absolute
-      transform: translate( -6px , 0 )
-      margin-top: 16px
       right: 25px
+
+      margin-top: 1.3rem
+
+      transform: translate( -6px , 0 )
       
       &:before , &:after
-        content: ""
         position: absolute
-        background-color: #4e4e50
+
         width: 3px
         height: 9px
+
+        content: ""
+
+        background-color: $main-accordion-arrows
         
       &:before
         transform: translate( -2px , 0 ) rotate( 45deg )
@@ -95,18 +116,23 @@
     
     input[type=checkbox]
       position: absolute
-      cursor: pointer
+      z-index: 1
+
       width: 100%
       height: 100%
-      z-index: 1
+
+      cursor: pointer
+
       opacity: 0
       
       &:checked
         &~div
-          margin-top: 0
           max-height: 0
-          opacity: 0
+          margin-top: 0
+
           transform: translate( 0 , 50% )
+
+          opacity: 0
             
         &~i
           &:before
@@ -116,14 +142,15 @@
             transform: translate( -2px , 0 ) rotate( -45deg )
 
         &~h2
-            background: #ffffff
-            border: 1px solid #aeacad
+            border: 1px solid $main-accordion-border
+            background: $main-accordion-bg
 
 @keyframes flipdown
   0%
-    opacity: 0
-    transform-origin: top center
     transform: rotateX(-90deg)
+    transform-origin: top center
+
+    opacity: 0
   5%
     opacity: 1
   80%
@@ -133,5 +160,5 @@
   92%
     transform: rotateX(-3deg)
   100%
-    transform-origin: top center
     transform: rotateX(0deg) 
+    transform-origin: top center

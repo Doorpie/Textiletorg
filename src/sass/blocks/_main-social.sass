@@ -1,14 +1,98 @@
 .main__social
     position: fixed
-    display: flex
-    flex-flow: column nowrap
+    z-index: 9997
     right: 0
 
-@media (max-width: 575.98px) 
+    display: flex
+    flex-flow: column nowrap
+
+.main-social
+    &__link
+        text-decoration: none
+
+@media (max-width: 1199.98px) 
     .main__social   
         display: none
 
 
-@media (min-width: 576px) and (max-width: 767.98px) 
-    .main__social
-        display: none
+.main__social [class^="icon-"], [class*=" icon-"] 
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'Main-social' !important
+    font-size: 31px
+    font-weight: normal
+    font-style: normal
+    font-variant: normal
+    line-height: 1.1
+
+    text-transform: none
+
+    speak: none
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+
+.icon-fa:before 
+    content: "\e900"
+
+    color: $main-social-bg
+    
+.icon-fa:hover:before 
+    color: $main-social-hover
+
+.icon-ins:before 
+    content: "\e901"
+
+    color: $main-social-bg
+
+.icon-ins:hover:before 
+    color: $main-social-hover   
+
+.icon-mail:before 
+    content: "\e902"
+
+    color: $main-social-bg
+
+.icon-mail:hover:before 
+    color: $main-social-hover   
+
+.icon-od:before 
+    content: "\e903"
+
+    color: $main-social-bg
+
+.icon-od:hover:before 
+    color: $main-social-hover
+
+.icon-soc:before 
+    content: "\e904"
+
+    color: $main-social-bg
+
+.icon-soc:hover:before 
+    color: $main-social-hover
+
+.icon-tv:before 
+    content: "\e905"
+
+    color: $main-social-bg
+
+.icon-tv:hover:before 
+    color: $main-social-hover
+
+.icon-vk:before 
+    content: "\e906"
+
+    color: $main-social-bg
+
+.icon-vk:hover:before 
+    color: $main-social-hover
+
+.icon-you:before 
+    content: "\e907"
+
+    color: $main-social-bg
+
+.icon-you:hover:before 
+    color: $main-social-hover

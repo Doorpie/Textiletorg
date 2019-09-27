@@ -7,12 +7,22 @@ html
 // Экстрамалые девайсы («портретные телефоны», < 576px)
 @media (max-width: 575.98px) 
     html
-        font-size: 0.6rem
+        font-size: 0.7rem
 
 // Малые девайсы («ландшафтные», >= 575px)
 @media (min-width: 576px) and (max-width: 767.98px) 
     html
         font-size: 0.5rem
+
+// Средние девайсы («таблетки», >= 768px) 
+@media (min-width: 768px) and (max-width: 991.98px) 
+    html
+        font-size: 0.8rem
+
+// Большие девайсы (большие десктопы, >= 992px)
+@media (min-width: 992px) and (max-width: 1199.98px) 
+    html
+        font-size: 1rem
 
 // Большие девайсы (большие десктопы, >= 1200px)
 @media (min-width: 1200px) 
@@ -20,36 +30,41 @@ html
         font-size: 1rem
 
 .main-page
-    margin: 0 auto
+    font-family: $Avenir, 'sans-serif'
+
+    margin: 0 
     padding: 0
-    background: #fff
-    font-family: 'Avenir Next Cyr', sans-serif
-    width: 100%
-    overflow-y: scroll
+
+    background: $main-page-bg
 
 .wrapper
     display: flex
-    flex-flow: column
+    flex-direction: column
+
     max-width: 1220px
+
     margin: 0 auto
-    padding: 0 10px 0
+    padding: 0 10px
 
 .header
     min-height: 205px
-    background: $gray
+
+    background: $header-bg
 
 .info
-    margin: 0 auto
     min-height: 75px
-    background: $red  url('../img/info/bg.png')
+    margin: 0 auto
+
+    background: $info-bg  url('../img/info/bg.png')
 
 .main
     margin-top: 10px
-    background: #ffffff  
-    border-radius: 10px
+
+    background: $main-bg  
 
 .footer
-    margin-top: 115px
+    margin-top: 50px
+
     background: $footer-bg
 
 @media (max-width: 575.98px) 

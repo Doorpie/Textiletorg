@@ -2,6 +2,8 @@
     &__reserved
         height: 254px
 
+        background: $footer-reserved-bg
+
     @media (max-width: 575.98px) 
         &__reserved
             max-height: 250px
@@ -12,18 +14,24 @@
 
 .reserved
     &__row
+        font: 400 1rem/1.27em $Avenir
+
         padding-top: 91px
-        font: 400 16px/1.27em 'Avenir Next Cyr'
-        color: $text
+
+        color: $footer-reserved-text
 
     @media (max-width: 575.98px) 
         &__row
+            font-size: 0.9375rem
+
             padding-top: 20px
-            font-size: 15px
+
             text-align: justify
         
     @media (min-width: 576px) and (max-width: 767.98px) 
         &__row
+            font-size: 1rem
+
             padding-top: 20px
-            font-size: 16px
+
             text-align: justify

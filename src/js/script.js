@@ -13,66 +13,40 @@ $(document).ready(function(){
 
 // end main-slider
 
-// leaders-slider
+// slider
 
-    $('.leaders__slider').slick({
+    $('.leaders__slider, .news__slider, .discounts__slider').slick({
         prevArrow: '<div class="leaders-slider__prev"></div>',
         nextArrow: '<div class="leaders-slider__next"></div>',
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
             {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-            }
-        ]
-    });
-
-// end leaders slider
-
-// news slider
-
-    $('.news__slider').slick({
-        prevArrow: '<div class="news-slider__prev"></div>',
-        nextArrow: '<div class="news-slider__next"></div>',
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
+                breakpoint: 1199,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3
+                }
+              },
             {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-            }
+                breakpoint: 1023,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
         ]
     });
 
-// end news slider
-
-// discounts slider
-
-    $('.discounts__slider').slick({
-        prevArrow: '<div class="discounts-slider__prev"></div>',
-        nextArrow: '<div class="discounts-slider__next"></div>',
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-            {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-            }
-        ]
-    });
-
-// end discounts slider
-// ens slick slider
+// end slider
+// end slick slider
 
 // select city
     $('.city__select, .city__name, .city__link').on('click', function(){

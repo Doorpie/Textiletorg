@@ -1,64 +1,63 @@
 .header
     &__top
+
         display: flex
-        flex-flow: row nowrap
         justify-content: space-between
+
         height: 105px
         padding-top: 21px
-        color: #ffffff
 
-
-@media (max-width: 575.98px) 
-    &__top
-        order: -1
-
-
-@media (min-width: 576px) and (max-width: 767.98px) 
-    &__top
-        order: -1
-        justify-content: center
+        color: $header-text-color
+        
 
 .top
     &__city
         position: relative
-        margin: 13px 0 0 29px
-        display: flex
-        flex-flow: column nowrap
-        justify-content: flex-start
-        align-items: center
-        position: relative
-        cursor: pointer
 
+        display: flex
+
+        align-items: center
+        flex-direction: column
+        justify-content: flex-start
+
+        margin: 13px 0 0 31px
+
+        cursor: pointer
         &::before
-            content: ''
             position: absolute
-            width: 16px
-            height: 24px
             top: 1px
             left: -28px
+
+            width: 16px
+            height: 24px
+
+            content: ''
+
             background: url('../img/header/top/city-geo.svg') no-repeat
 
     &__cart
-        margin: 13px 0 0 0
-        display: flex
-        flex-flow: column nowrap
-        justify-content: flex-start
-        align-items: center
         position: relative
-        letter-spacing: -0.5px
+
+        display: flex
+
+        align-items: center
+        justify-content: flex-start
+
+        margin: 13px 0 0 0
+
         cursor: pointer
 
         &::before
-            content: ''
             position: absolute
+            top: 3px
+            left: -30px
+
             width: 20px
             height: 21px
-            top: 1px
-            left: -32px
-            background: url('../img/header/top/cart.svg') no-repeat
 
-    &__logo
-        margin: -1px 0 0 -5px
+            content: ''
+
+            background: url('../img/header/top/cart.svg') no-repeat
 
 @media (max-width: 575.98px) 
     .top
@@ -74,8 +73,9 @@
 @media (min-width: 576px) and (max-width: 767.98px) 
     .top   
         &__logo
-            margin-left: 0 
             order: -1 
+
+            margin-left: 0 
 
         &__city
             &::before
@@ -87,40 +87,50 @@
 
 .city
     &__name
-        font: 400 23px/1.2em 'Avenir Next Cyr'
+        font: 400 1.438rem/1.25em $Avenir
+
         text-transform: uppercase
 
     &__select
-        font: 400 17px/1.3em 'Avenir Next Cyr'
-        letter-spacing: -1.1px
-        border-bottom: 1px dashed #ffffff
+        font: 400 1.063rem/1.3em $Avenir
+
         cursor: pointer
+        letter-spacing: -1.1px
+
+        border-bottom: 1px dashed $header-top-border
 
     &__list
-        visibility: hidden
         position: absolute
+        z-index: 9997
         top: 38px
         left: 0
-        background: $gray
-        list-style-type: none
+
+        visibility: hidden
+
+        width: 175px
         margin: 11px 0 0 -25px
         padding: 0
-        width: 175px
-        border-top: 1px dotted #ffffff
+
+        list-style-type: none
+
+        border-top: 1px dotted $header-top-border
         border-radius: 0 0 7px 7px
-        z-index: 9997
+        background: $city-select-bg
 
         &--show
             visibility: visible
 
     &__item
         padding: 5px 6px	
-				
+		
     &__link
+        font: 400 1.125rem/.9em $Avenir
+
         padding:  0 20px 0 30px
-        color: #ffffff
+
         text-decoration: none
-        font: 400 18px/0.9em 'Avenir Next Cyr'
+
+        color: $header-text-color
 
         &:hover
             text-decoration: underline
@@ -130,34 +140,45 @@
         
 .cart
     &__name
-        font: 400 23px/1.2em 'Avenir Next Cyr'
+        font: 400 1.4375rem/1.3em $Avenir
+
+        letter-spacing: -.55px
         text-transform: uppercase
 
     &__subname
-        font: 400 17px/1.3em 'Avenir Next Cyr'
+        font: 400 1.125rem/1.3em $Avenir
+
+        margin-left: 9px
+
+        letter-spacing: -1px
 
 @media (min-width: 576px) and (max-width: 767.98px) 
     .city
         &__name
-            font: 400 18px/1.2em 'Avenir Next Cyr'
+            font: 400 2rem/1.2em $Avenir
+
             text-transform: uppercase
-            border-bottom: 1px dashed #ffffff
+
+            border-bottom: 1px dashed $header-top-border
 
         &__select
-           display: none
+            display: none
 
         &__list
-            border: none
             top: 11px
+
             margin-left: -36px
+
+            border: none
 
     .cart
         &__name
-            font-size: 18px
+            font-size: 2rem
+
             text-transform: uppercase
 
         &__subname
-            font-size: 15px
-            border-bottom: 1px dashed #ffffff
+            font-size: 1.5rem
 
-       
+            border-bottom: 1px dashed $header-top-border
+
